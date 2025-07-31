@@ -1,23 +1,41 @@
-<header>
-  <nav class="menu">
-    <div class="logo">Junior SP</div>
-    <ul class="nav-links">
-      <li><a href="#about">Bio</a></li>
-      <li><a href="#discografia">Discografia</a></li>
-      <li><a href="#music">Música</a></li>
-      <li><a href="#gallery">Galeria</a></li>
-      <li><a href="#contact">Contato</a></li>
-    </ul>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junior SP - Site Oficial</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
 
+  <!-- 🌟 Menu de navegação -->
+  <header>
+    <nav class="menu">
+      <div class="logo">Junior SP</div>
+      <ul class="nav-links">
+        <li><a href="#about">Bio</a></li>
+        <li><a href="#discografia">Discografia</a></li>
+        <li><a href="#music">Música</a></li>
+        <li><a href="#gallery">Galeria</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- 🧑‍🎤 Seção Bio com imagem -->
+  <section id="about" class="section-padding">
     <div class="about-content" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
-
       <img id="minha_foto2" src="img/minha_foto2.jpg" alt="Foto do Artista"
            class="profile-img"
            style="max-width: 320px; border-radius: 10px;"
            onerror="this.onerror=null; this.src='img/fallback2.jpg';">
+      <div class="bio-text" style="max-width: 500px;">
+        <h2>Biografia</h2>
+        <p>Junior SP é um artista periférico que mistura identidade urbana com criatividade pulsante. Sua trajetória musical é marcada por autenticidade e representatividade.</p>
+      </div>
+    </div>
+  </section>
 
       <div id="artist-bio" class="bio-text" style="text-align: justify; font-size: 1.1rem; line-height: 1.8; max-width: 680px;">
         <p><strong>Junior SP</strong> é mais que um nome artístico — é um símbolo de resistência e criação periférica.</p>
