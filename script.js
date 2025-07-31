@@ -1,40 +1,40 @@
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", () => {
+  // Botão voltar ao topo
+  const topBtn = document.createElement("button");
+  topBtn.id = "backToTop";
+  topBtn.innerText = "↑";
+  document.body.appendChild(topBtn);
 
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+  window.addEventListener("scroll", () => {
+    topBtn.style.display = window.scrollY > 300 ? "block" : "none";
   });
-</script>
 
-<style>
-  .nav-links.active {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-  }
-</style>
-
-// Rolagem suave nos links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
-});
 
-// Botão de voltar ao topo
-const backToTopBtn = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-  backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-});
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Rolagem suave para links internos
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+
+  // Ajuste responsivo para nav vertical (opcional)
+  const nav = document.querySelector(".vertical-nav");
+  if (nav) {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 600) {
+        nav.style.flexDirection = "row";
+      } else {
+        nav.style.flexDirection = "column";
+      }
+    });
+  }
 });
 
 

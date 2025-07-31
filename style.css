@@ -1,225 +1,163 @@
-/* 🔮 ESTILO GLOBAL */
-body {
-  font-family: 'Orbitron', sans-serif;
-  background-color: #000;
-  color: #0ff;
+/* === Reset global === */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
-/* 🔥 HEADER E MENU */
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #000;
-}
-
-.menu-toggle {
-  background: none;
-  border: none;
-  font-size: 2em;
-  color: #0ff;
-  cursor: pointer;
-  display: none;
-}
-
-.nav-links {
-  list-style: none;
-  justify-content: center;
-  gap: 18px;
-  padding: 0;
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
-
-/* Estilo base dos links do menu */
-.nav-links li a {
-  color: #0ff;
-  text-decoration: none;
-  font-size: 1.2em;
-  font-weight: bold;
-  animation: glow 1.8s infinite alternate;
-  transition: 0.3s;
-}
-
-/* Hover brilhante */
-.nav-links li a:hover {
-  color: #fff;
-  text-shadow: 0 0 8px #0ff, 0 0 20px #0ff;
-}
-
-/* 📱 MOBILE — vertical com toggle */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nav-links.active {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    margin: 10px auto;
-  }
-}
-
-/* ✨ ANIMAÇÃO NEON */
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px #0ff;
-  }
-  to {
-    text-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
-  }
-}
-
-/* 🧱 CARDS */
-.card {
-  background-color: #111;
-  border-radius: 8px;
-  padding: 15px;
-  margin: 20px;
-  box-shadow: 0 0 10px #0ff;
-  color: #fff;
-  transition: 0.3s ease-in-out;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px #0ff;
-}
-
-/* 📝 FORMULÁRIOS */
-form {
-  background-color: #111;
-  padding: 20px;
-  margin: 30px auto;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #0ff;
-}
-
-form input,
-form textarea,
-form button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1em;
-}
-
-form input,
-form textarea {
-  background: #222;
-  color: #0ff;
-}
-
-form button {
-  background-color: #0ff;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-form button:hover {
-  background-color: #fff;
-  box-shadow: 0 0 10px #0ff;
-}
-
-/* 🎯 FOOTER */
-footer {
-  text-align: center;
-  padding: 25px 15px;
-  background-color: #000;
-  font-size: 0.9em;
-  color: #888;
-  border-top: 2px solid #0ff;
-}
-
-footer a {
-  color: #0ff;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-footer a:hover {
-  color: #fff;
-  text-shadow: 0 0 5px #0ff;
-/* Adicione no <head> do HTML */
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-/* CSS responsivo */
 body {
-  margin: 0;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: #0ff;
+}
+a:hover {
   color: #fff;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* === Estrutura de containers === */
+.section-padding {
+  padding: 60px 20px;
+}
+.container {
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.container {
+/* === Hero Section === */
+.hero-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 800px;
-  margin: auto;
-  padding: 10px;
-}
-
-h1, h2, h3 {
+  align-items: center;
   text-align: center;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('LINK-DA-SUA-IMAGEM-AQUI') no-repeat center center fixed;
-  background-size: cover;
-  color: #f0f0f0;
-}
-
-header, nav {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  border-bottom: 2px solid #0ff;
-}
-
-a {
+.artist-name {
+  font-size: 48px;
   color: #0ff;
-  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.vertical-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  margin-bottom: 20px;
+}
+.vertical-nav a {
+  font-size: 18px;
+  background-color: #0ff;
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.hero-tagline {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.hero-image {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0ff;
+}
+
+/* === Biografia === */
+.bio-text {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+.profile-img {
+  max-width: 300px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+/* === Discografia === */
+.discografia-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.discografia-table th, .discografia-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #0ff;
+}
+.discografia-table th {
+  background-color: #000;
+  color: #0ff;
+}
+
+/* === Música === */
+.music-item {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+}
+.platform-link {
+  color: #0ff;
+  font-weight: bold;
+}
+.platform-link:hover {
+  color: #fff;
+}
+
+/* === Galeria === */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.gallery-grid figure {
+  max-width: 300px;
+  text-align: center;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+}
+.gallery-grid figcaption {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* === Contato === */
+#contact-info {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+.social-links a {
+  background-color: #0ff;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 5px;
   font-weight: bold;
 }
 
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 8px;
-  backdrop-filter: blur(6px);
+/* === Footer === */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+footer img {
+  height: 30px;
 }
 
-.nav-links {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-}
 
 >>>>>>> 99f16b6cb4a43076710c7198f66c6cd5da9e8507
