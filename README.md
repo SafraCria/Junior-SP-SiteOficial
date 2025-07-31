@@ -1,3 +1,24 @@
+  GNU nano 8.5                       README.md
+#  ~Y️ Junior SP – Site Oficial
+Este é o site oficial de **Junior SP**, artista periférico e criador do Drillre>
+
+##  ~L Visão Geral
+
+- ✅ Site estático construído com HTML, CSS e JavaScript
+-  M-<️ Layout responsivo e visual urbano, inspirado na estética Favela-Tech
+-  ~A Sistema de fallback para imagens que não carregarem
+-  ~R Repositório privado (código protegido), com visual público via GitHub Page
+
+##  ~P Acesse o site
+
+ ~[junior-sp-siteoficial.github.io](https://safracria.github.io/Junior-SP-SiteO>
+
+> O site é público para visualização, mas os arquivos e diretórios originais es>
+
+##  M-% Créditos
+
+-  M**Junior SP**P** — artista, idealizador e criador do conteúdo
+-  M**safracria**a** — desenvolvedor e curador técnico do projeto
 # 🎙️ Junior SP – Site Oficial
 Este é o site oficial de **Junior SP**, artista periférico e criador do Drillreggae. A plataforma foi desenvolvida com foco em acessibilidade, identidade visual autêntica e presença digital independente.
 
