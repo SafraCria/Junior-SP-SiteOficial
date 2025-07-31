@@ -107,5 +107,47 @@ h3 {
   z-index: 1001;
 }
 
+.card {
+  background: #111;
+  color: #fff;
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px #0ff;
+  transition: all 0.3s ease-in-out;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Layout responsivo para seção de cards */
+.discografia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .discografia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
+
 
 >>>>>>> 99f16b6cb4a43076710c7198f66c6cd5da9e8507

@@ -1,3 +1,11 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Junior-SP</title>
+  <style>
+    /* Cola aqui o novo CSS */
+  </style>
+</head>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,6 +24,7 @@
         <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
         <ul class="nav-links">
           <li><a href="#about">Bio</a></li>
+          <li><a href="#about">Discografia</a></li>
           <li><a href="#music">Música</a></li>
           <li><a href="#gallery">Galeria</a></li>
           <li><a href="#contact">Contato</a></li>
@@ -69,105 +78,28 @@
   </div>
 </section>
 
-<section id="discografia" class="section-padding">
+<section id="discografia" class="section-padding bg-dark">
   <div class="container">
+    <h2 class="section-title">Discografia</h2>
+    <p class="section-description">Explore os álbuns e projetos lançados.</p>
+    
+    <div class="discografia-grid">
+      <div class="album-card">
+        <img src="img/album1.jpg" alt="Capa do Álbum 1">
+        <h3>Álbum Favela Beat</h3>
+        <p>2020 • 10 faixas</p>
+      </div>
 
-    <h2 class="section-title" style="text-align: center;">💿 Discografia & Projetos Relevantes</h2>
-
-    <table class="discografia-table">
-      <thead>
-        <tr>
-          <th>Ano</th>
-          <th>Projetos / Obra</th>
-          <th>Destaques</th>
-          <th>Link</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>2013</td>
-          <td>A Life 13 (EP)</td>
-          <td>Estreia com 4 faixas no SoundCloud</td>
-          <td><a href="https://soundcloud.com/juniorsp" target="_blank">🔗 Ouvir</a></td>
-        </tr>
-
-        <tr>
-          <td>2016</td>
-          <td>Aqui é Máfia (Feat)</td>
-          <td>O Bonde Chega Pesado com Preto Aplick, Ananias</td>
-          <td><a href="https://www.youtube.com/watch?v=0SbPaGYqiW0" target="_blank">🔗 YouTube</a></td>
-        </tr>
-
-        <tr>
-          <td>2020</td>
-          <td>Horizontes (Single)</td>
-          <td>Produção completa via Tozkera Recordz</td>
-          <td><a href="https://www.youtube.com/watch?v=ErKNsJgOmXY" target="_blank">🔗 Ver</a></td>
-        </tr>
-
-        <tr>
-          <td>2021</td>
-          <td>Embalo (Single)</td>
-          <td>Live editada pela Q4PRODUÇÕES</td>
-          <td><a href="https://www.youtube.com/watch?v=lP_RXKBcwCk" target="_blank">🔗 Performance</a></td>
-        </tr>
-
-        <tr>
-          <td>2022</td>
-          <td>Visibilidade (Single)</td>
-          <td>Releitura com arranjos de Yahudim</td>
-          <td><a href="https://www.youtube.com/watch?v=BAhSfkRewdA" target="_blank">🔗 Ver</a></td>
-        </tr>
-
-        <tr>
-          <td>2024</td>
-          <td>M17 pt.2 (LOBIFALCON)</td>
-          <td>Violão de Leandro D’Zambi + produção Marky Bú</td>
-          <td><a href="https://www.youtube.com/watch?v=7PNyyTBq7IY" target="_blank">🔗 Ouvir</a></td>
-        </tr>
-
-        <tr>
-          <td>2024</td>
-          <td>Inovação (Single)</td>
-          <td>Estreia do Drill-Reggae no Brasil</td>
-          <td><a href="https://www.youtube.com/watch?v=-YR1HlDd-Pk" target="_blank">🔗 Ver</a></td>
-        </tr>
-
-        <tr>
-          <td>2025</td>
-          <td>Natureza e Cor (Single)</td>
-          <td>Letra de Junior SP + produção de Marky Bú</td>
-          <td><a href="https://www.youtube.com/watch?v=EWwEiS9he6k" target="_blank">🔗 Ver</a></td>
-        </tr>
-
-        <tr>
-          <td>2025</td>
-          <td>Temos Que Ser Fortes (Feat.)</td>
-          <td>Parceria com Leandro D’Zambi + Hordak Records</td>
-          <td><a href="https://www.youtube.com/watch?v=ZtF2SiGIb8A" target="_blank">🔗 Ver</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- 🎥 Carrossel de vídeo destaque -->
-    <div class="carrossel-discografia" style="margin-top: 40px; text-align: center;">
-      <h3 style="margin-bottom: 20px;">🎥 Destaques em Vídeo</h3>
-      <iframe width="100%" height="315" 
-              src="https://www.youtube.com/embed/EWwEiS9he6k?list=RDEWwEiS9he6k" 
-              frameborder="0" allowfullscreen>
-      </iframe>
+      <div class="album-card">
+        <img src="img/album2.jpg" alt="Capa do Álbum 2">
+        <h3>Baile de Rua</h3>
+        <p>2022 • 12 faixas</p>
+      </div>
+      
+      <!-- Adicione mais álbuns aqui -->
     </div>
-
   </div>
 </section>
-
-<section id="music" class="section-padding bg-dark">
-  <div class="container">
-
-    <h2 class="section-title" style="text-align: center;">🎵 Minha Música</h2>
-
-    <div class="music-grid" id="music-list" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
 
       <!-- Track: Inovação -->
       <div class="music-item" style="max-width: 400px;">
