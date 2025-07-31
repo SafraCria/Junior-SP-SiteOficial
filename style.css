@@ -149,5 +149,37 @@ h3 {
   }
 }
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0ff;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #0ff;
+}
+
 
 >>>>>>> 99f16b6cb4a43076710c7198f66c6cd5da9e8507
