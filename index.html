@@ -1,3 +1,52 @@
+<head>
+  <!-- 🚀 Botão "Voltar ao Topo" com rolagem suave - Inserido em [data] por Finanças -->
+  <style>
+    #backToTop {
+      position: fixed;
+      bottom: 40px;
+      right: 30px;
+      background-color: #0ff;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Criar botão programaticamente para garantir que ele apareça
+      const button = document.createElement("button");
+      button.id = "backToTop";
+      button.innerText = "↑";
+      document.body.appendChild(button);
+
+      // Mostrar/esconder botão ao rolar
+      window.addEventListener("scroll", () => {
+        button.style.display = window.scrollY > 300 ? "block" : "none";
+      });
+
+      // Rolar suavemente ao topo
+      button.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Rolagem suave nos links internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    });
+  </script>
+</head>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
