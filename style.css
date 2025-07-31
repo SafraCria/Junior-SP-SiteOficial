@@ -159,5 +159,301 @@ footer img {
   height: 30px;
 }
 
+/* 🎨 HERO SECTION - Estilo Favela-Tech Neon */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.artist-name {
+  font-family: 'Monoton', cursive;
+  font-size: 64px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  margin-bottom: 20px;
+  animation: neonFlicker 2s infinite;
+}
+
+.hero-tagline {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #0ff;
+}
+
+/* 🌐 Navegação vertical */
+.vertical-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vertical-nav a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #0ff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.vertical-nav a:hover {
+  background-color: #0ff;
+  color: #000;
+}
+
+/* ✨ Animação neon flicker */
+@keyframes neonFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; text-shadow: 0 0 2px #0ff, 0 0 5px #0ff; }
+}
+
+/* 📄 Estrutura da seção biografia */
+.section-padding {
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 36px;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  color: #0ff;
+  text-shadow: 0 0 8px #0ff;
+  margin-bottom: 40px;
+}
+
+/* 🎭 Estilo da foto do artista */
+.profile-img {
+  float: left;
+  width: 200px;
+  height: auto;
+  margin-right: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+}
+
+/* 🧠 Conteúdo da biografia */
+#artist-bio {
+  overflow: hidden;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+#artist-bio h3 {
+  color: #0ff;
+  margin-top: 40px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+/* 🎵 Parágrafos da bio */
+#artist-bio p {
+  margin-bottom: 16px;
+}
+
+/* Responsivo para telas menores */
+@media screen and (max-width: 768px) {
+  .profile-img {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  #artist-bio {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Estilos básicos da tabela */
+.discografia-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  background-color: #111;
+  color: #eee;
+  box-shadow: 0 0 12px rgba(0,255,255,0.2);
+}
+
+.discografia-table th,
+.discografia-table td {
+  border: 1px solid #444;
+  padding: 12px;
+  text-align: left;
+}
+
+.discografia-table th {
+  background-color: #00ffe1;
+  color: #000;
+  text-transform: uppercase;
+}
+
+/* Links dentro da tabela */
+.discografia-table a {
+  color: #00ffe1;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.discografia-table a:hover {
+  color: #fff;
+}
+
+/* 🎥 Carrossel responsivo */
+.carrossel-discografia iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+/* 🌐 Responsividade em telas menores */
+@media screen and (max-width: 768px) {
+  .discografia-table thead {
+    display: none; /* Oculta cabeçalho em mobile */
+  }
+
+  .discografia-table,
+  .discografia-table tbody,
+  .discografia-table tr,
+  .discografia-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .discografia-table tr {
+    margin-bottom: 15px;
+    background-color: #1c1c1c;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.1);
+  }
+
+  .discografia-table td {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    border: none;
+    position: relative;
+  }
+
+  .discografia-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #00ffe1;
+  }
+}
+
+/* ---------- Seção de Contato ---------- */
+#contact {
+  padding: 60px 20px;
+  background-color: #111;
+  color: #eee;
+}
+
+#contact .section-title {
+  text-align: center;
+  color: #00ffe1;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00ffe1;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Info principal de contato */
+#contact-info {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+#contact-info a {
+  color: #00ffe1;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact-info a:hover {
+  color: #fff;
+}
+
+/* ---------- Links de redes sociais ---------- */
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links li a {
+  color: #eee;
+  font-weight: bold;
+  font-size: 0.95rem;
+  background-color: #222;
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0,255,255,0.2);
+}
+
+.social-links li a:hover {
+  background-color: #00ffe1;
+  color: #000;
+}
+
+/* ---------- Responsividade Mobile ---------- */
+@media screen and (max-width: 600px) {
+  #contact .section-title {
+    font-size: 1.8rem;
+  }
+
+  #contact-info {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .social-links li a {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}
+
+
 
 >>>>>>> 99f16b6cb4a43076710c7198f66c6cd5da9e8507

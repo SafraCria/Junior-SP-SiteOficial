@@ -1,132 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Junior SP - Site Oficial</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-
-  <!-- 🚀 Estilo do botão "voltar ao topo" -->
-  <style>
-    #backToTop {
-      position: fixed;
-      bottom: 40px;
-      right: 30px;
-      background-color: #0ff;
-      color: #000;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      font-size: 16px;
-      cursor: pointer;
-      display: none;
-      z-index: 999;
-    }
-  </style>
 </head>
 <body>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const button = document.createElement("button");
-      button.id = "backToTop";
-      button.innerText = "↑";
-      document.body.appendChild(button);
-
-      window.addEventListener("scroll", () => {
-        button.style.display = window.scrollY > 300 ? "block" : "none";
-      });
-
-      button.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
-        });
-      });
-    });
-  </script>
-
   <main>
-
-    <!-- 🔥 Seção Hero com layout vertical -->
+    <!-- 🔥 Seção Hero principal -->
     <section id="hero" class="hero-section">
       <div class="hero-container">
         <h1 class="artist-name">Junior SP</h1>
 
+        <!-- 🌐 Navegação vertical -->
         <nav class="vertical-nav">
           <ul>
             <li><a href="#bio">Bio</a></li>
             <li><a href="#discografia">Discografia</a></li>
             <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#minha-musica">Minha Música</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
 
         <p class="hero-tagline">No Sopro da Vida, no Prazer de Viver</p>
-
-        <img src="img/imagem-do-artista.jpg" alt="Junior SP em destaque" class="hero-image">
+        <img src="img/imagem-do-artista.jpg" alt="Junior SP em destaque" class="hero-image" />
       </div>
     </section>
 
-    <!-- ✍️ Seção Biografia -->
-    <section id="bio" class="section-padding">
-      <div class="container">
-        <h2 class="section-title">Biografia</h2>
-        <div class="about-content">
-          <img id="minha_foto2" src="img/minha_foto2.jpg" alt="Foto do Artista"
-               class="profile-img"
-               onerror="this.onerror=null; this.src='img/fallback2.jpg';">
-          <p class="bio-text">
-            <!-- ✍️ Aqui você insere seu texto original de biografia, sem alteração. Exemplo: -->
-            Junior SP é um artista que transforma a vida em música e poesia, com raízes profundas na alma brasileira...
-          </p>
-        </div>
-      </div>
-    </section>
-
+    <!-- 🔧 Seções base -->
+    <section id="bio"><h2>Biografia</h2></section>
+    <section id="discografia"><h2>Discografia</h2></section>
+    <section id="galeria"><h2>Galeria</h2></section>
+    <section id="minha-musica"><h2>Minha Música</h2></section>
+    <section id="contato"><h2>Contato</h2></section>
   </main>
 </body>
 </html>
 
-  <section id="bio" class="section-padding">
+   <!-- ✍️ Seção Biografia -->
+<section id="bio" class="section-padding">
   <div class="container">
     <h2 class="section-title">Biografia</h2>
 
-    <div id="artist-bio" style="text-align: justify; font-size: 1.1rem; line-height: 1.8;">
-      <p><strong>Junior SP</strong> é mais que um nome artístico — é um símbolo de resistência e criação periférica.</p>
+    <div class="about-content">
+      <img id="minha_foto2" src="img/minha_foto2.jpg" alt="Foto do Artista"
+           class="profile-img"
+           onerror="this.onerror=null; this.src='img/fallback2.jpg';">
 
-      <p>Desde os primeiros batimentos de "beatboxer", Junior SP trilha uma jornada artística marcada por autenticidade, resistência e inovação. Cantor, compositor, produtor musical e artista visual, ele traduz sua vivência periférica em poesia sonora — com o RAP como espinha dorsal de suas narrativas.</p>
+      <div id="artist-bio">
+        <p><strong>Junior SP</strong> é mais que um nome artístico — é um símbolo de resistência e criação periférica.</p>
 
-      <p>Natural de Guarulhos/SP, Junior cresceu imerso nos ritmos e contrastes da metrópole.</p>
-      <p>Dos primeiros anos no Vila Mara (Z/L) até a adolescência em Itaquaquecetuba-SP, cada Bairro, Cidade e Estado foi escola de vivência e inspiração.</p>
-      <p>Hoje, segue pulsando arte diretamente da capital paulista, entre ruas suburbanas e avenidas centrais — com passagens marcantes por São Mateus (Z/L), Capão Redondo (Z/S), Perus (Z/O) e Jd.Hebron (Z/N).</p>
+        <p>Desde os primeiros batimentos de "beatboxer", Junior SP trilha uma jornada artística marcada por autenticidade, resistência e inovação. Cantor, compositor, produtor musical e artista visual, ele traduz sua vivência periférica em poesia sonora — com o RAP como espinha dorsal de suas narrativas.</p>
 
-      <h3 style="margin-top: 40px;">🔊 Estilo Musical & Influências</h3>
-      <p>Junior SP trafega pelas vertentes da Black Music com naturalidade, misturando a espinha dorsal RAP com reggae, drill, trap e freestyle.</p>
-      <p>Suas letras são carregadas de reflexão social, lirismo urbano e identidade periférica.</p>
-      <p>A fluidez com que manipula beats, palavras e imagens transforma cada produção em uma obra multidimensional.</p>
+        <p>Natural de Guarulhos/SP, Junior cresceu imerso nos ritmos e contrastes da metrópole.</p>
+        <p>Dos primeiros anos no Vila Mara (Z/L) até a adolescência em Itaquaquecetuba-SP, cada Bairro, Cidade e Estado foi escola de vivência e inspiração.</p>
+        <p>Hoje, segue pulsando arte diretamente da capital paulista, entre ruas suburbanas e avenidas centrais — com passagens marcantes por São Mateus (Z/L), Capão Redondo (Z/S), Perus (Z/O) e Jd. Hebron (Z/N).</p>
 
-      <h3 style="margin-top: 40px;">📌 Influências Musicais</h3>
-      <p>Junior SP traz na bagagem o samba, o jazz, o rap e o reggae — criando uma sonoridade única...</p>
+        <h3>🔊 Estilo Musical & Influências</h3>
+        <p>Junior SP trafega pelas vertentes da Black Music com naturalidade, misturando a espinha dorsal RAP com reggae, drill, trap e freestyle.</p>
+        <p>Suas letras são carregadas de reflexão social, lirismo urbano e identidade periférica.</p>
+        <p>A fluidez com que manipula beats, palavras e imagens transforma cada produção em uma obra multidimensional.</p>
 
-      <h3 style="margin-top: 40px;">📸 Além da música</h3>
-      <p>Seja criando videoclipes, editando imagens ou performando ao vivo como DJ, Junior SP é um artista completo, comprometido com a estética da favela e com a força de sua comunidade.</p>
-      <p>Seus trabalhos não são apenas produtos musicais — são registros de uma cultura que resiste, transforma e inspira.</p>
-      <p>Mais do que estilos, suas letras carregam alma, resistência e expressão social. Em suas obras, cada verso é um relato de superação, cada beat é uma ponte entre mundos.</p>
+        <h3>📌 Influências Musicais</h3>
+        <p>Junior SP traz na bagagem o samba, o jazz, o rap e o reggae — criando uma sonoridade única...</p>
 
-      <h3 style="margin-top: 40px;">🚀 Trajetória Independente & Colaborativa</h3>
-      <p>A arte nasce direto da rua e chega ao streaming.</p>
+        <h3>📸 Além da música</h3>
+        <p>Seja criando videoclipes, editando imagens ou performando ao vivo como DJ, Junior SP é um artista completo, comprometido com a estética da favela e com a força de sua comunidade.</p>
+        <p>Seus trabalhos não são apenas produtos musicais — são registros de uma cultura que resiste, transforma e inspira.</p>
+        <p>Mais do que estilos, suas letras carregam alma, resistência e expressão social. Em suas obras, cada verso é um relato de superação, cada beat é uma ponte entre mundos.</p>
 
-      <p style="margin-bottom: 30px;"><strong>Junior SP é mais que som</strong> — é mensagem, é imagem, é revolução. E esta é apenas uma parte da história.</p>
+        <h3>🚀 Trajetória Independente & Colaborativa</h3>
+        <p>A arte nasce direto da rua e chega ao streaming.</p>
+
+        <p style="margin-bottom: 30px;"><strong>Junior SP é mais que som</strong> — é mensagem, é imagem, é revolução. E esta é apenas uma parte da história.</p>
+      </div>
     </div>
   </div>
 </section>
+
 
 <section id="discografia" class="section-padding">
   <div class="container">
@@ -149,56 +103,48 @@
           <td>Estreia com 4 faixas no SoundCloud</td>
           <td><a href="https://soundcloud.com/juniorsp" target="_blank">🔗 Ouvir</a></td>
         </tr>
-
         <tr>
           <td>2016</td>
           <td>Aqui é Máfia (Feat)</td>
           <td>Faixa “O Bonde Chega Pesado” + (feats Preto Aplick, Ananias)</td>
           <td><a href="https://www.youtube.com/watch?v=0SbPaGYqiW0" target="_blank">🔗 Ouvir</a></td>
         </tr>
-
         <tr>
           <td>2020</td>
           <td>Horizontes (Single)</td>
           <td>Produção completa via Tozkera Recordz</td>
           <td><a href="https://www.youtube.com/watch?v=ErKNsJgOmXY&list=RDErKNsJgOmXY" target="_blank">🔗 Ver</a></td>
         </tr>
-
         <tr>
           <td>2021</td>
           <td>Embalo (Single)</td>
           <td>DJ + editor de live pela Q4PRODUÇÕES</td>
           <td><a href="https://www.youtube.com/watch?v=lP_RXKBcwCk&list=RDlP_RXKBcwCk" target="_blank">🔗 Ver Performance</a></td>
         </tr>
-
         <tr>
           <td>2022</td>
           <td>Visibilidade (Single)</td>
           <td>Releitura de A Life 13 com arranjos de Yahudim</td>
           <td><a href="https://www.youtube.com/watch?v=BAhSfkRewdA&list=RDBAhSfkRewdA" target="_blank">🔗 Ver</a></td>
         </tr>
-
         <tr>
           <td>2024</td>
           <td>M17 pt.2 (LOBIFALCON)</td>
           <td>Violão de Leandro D’Zambi + produção Marky Bú</td>
           <td><a href="https://www.youtube.com/watch?v=7PNyyTBq7IY&list=RD7PNyyTBq7IY" target="_blank">🔗 Ouvir</a></td>
         </tr>
-
         <tr>
           <td>2024</td>
           <td>Inovação (Single)</td>
           <td>Estreia do Drill-Reggae no Brasil</td>
           <td><a href="https://www.youtube.com/watch?v=-YR1HlDd-Pk" target="_blank">🔗 Ver</a></td>
         </tr>
-
         <tr>
           <td>2025</td>
           <td>Natureza e Cor (Single)</td>
           <td>Letra de Junior SP + produção de Marky Bú</td>
           <td><a href="https://www.youtube.com/watch?v=EWwEiS9he6k" target="_blank">🔗 Ver</a></td>
         </tr>
-
         <tr>
           <td>2025</td>
           <td>Temos Que Ser Fortes (Feat.)</td>
@@ -208,7 +154,6 @@
       </tbody>
     </table>
 
-    <!-- 🎥 Destaques em Vídeo -->
     <div class="carrossel-discografia" style="margin-top: 40px; text-align: center;">
       <h3 style="margin-bottom: 20px;">🎥 Destaques em Vídeo</h3>
       <iframe width="100%" height="315" 
@@ -287,6 +232,7 @@
     </div>
   </div>
 </section>
+
 
 <section id="contact" class="section-padding bg-dark">
   <div class="container">
