@@ -93,5 +93,19 @@ h3 {
   margin: 0 auto;
 }
 
+.fixed-top-button {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  z-index: 1001;
+}
+
+.fixed-lateral-button {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  z-index: 1001;
+}
+
 
 >>>>>>> 99f16b6cb4a43076710c7198f66c6cd5da9e8507
