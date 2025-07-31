@@ -154,5 +154,72 @@ footer a {
 footer a:hover {
   color: #fff;
   text-shadow: 0 0 5px #0ff;
+/* Adicione no <head> do HTML */
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+/* CSS responsivo */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('LINK-DA-SUA-IMAGEM-AQUI') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0;
+}
+
+header, nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-bottom: 2px solid #0ff;
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
 
 >>>>>>> 99f16b6cb4a43076710c7198f66c6cd5da9e8507
