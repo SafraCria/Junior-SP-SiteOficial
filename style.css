@@ -1,304 +1,96 @@
-/* ---------- Paleta Base ---------- */
-:root {
-  --cor-fundo: #0b0b0b;
-  --cor-texto: #eee;
-  --cor-destaque: #00ffe1;
-  --cor-hover: #fff;
-  --fonte-titulo: 'Orbitron', sans-serif;
-  --fonte-body: 'Montserrat', sans-serif;
-}
-
-/* ---------- Reset básico ---------- */
+/* Resetando e ampliando tudo */
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--fonte-body);
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+  background: #000; /* vibe visual urbana */
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* ---------- Containers ---------- */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-/* ---------- Títulos ---------- */
-.section-title {
-  text-align: center;
-  font-family: var(--fonte-titulo);
-  font-size: 2.5rem;
-  color: var(--cor-destaque);
-  text-shadow: 0 0 12px var(--cor-destaque);
-  margin-bottom: 40px;
-}
-
-/* ---------- Tabelas ---------- */
-.discografia-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1rem;
-  background-color: #151515;
-  box-shadow: 0 0 12px rgba(0,255,255,0.2);
-}
-
-.discografia-table th,
-.discografia-table td {
-  border: 1px solid #444;
-  padding: 12px;
-  text-align: left;
-}
-
-.discografia-table th {
-  background-color: var(--cor-destaque);
-  color: #000;
-  font-weight: bold;
-}
-
-.discografia-table a {
-  color: var(--cor-destaque);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.discografia-table a:hover {
-  color: var(--cor-hover);
-}
-
-/* ---------- Galeria ---------- */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.gallery-grid figure {
-  background-color: #111;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,255,255,0.2);
-  transition: transform 0.3s ease;
-}
-
-.gallery-grid figure:hover {
-  transform: scale(1.03);
-}
-
-.gallery-grid img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.gallery-grid figcaption {
-  padding: 12px;
-  text-align: center;
-  font-weight: bold;
-  background-color: #000;
-  color: var(--cor-destaque);
-}
-
-/* ---------- Contato ---------- */
-#contact {
-  background-color: #111;
-  padding: 60px 20px;
-}
-
-#contact-info {
-  text-align: center;
-  line-height: 1.6;
-  font-size: 1rem;
-  margin-bottom: 40px;
-}
-
-#contact-info a {
-  color: var(--cor-destaque);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-#contact-info a:hover {
-  color: var(--cor-hover);
-}
-
-/* ---------- Redes sociais ---------- */
-.social-links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.social-links li a {
-  background-color: #222;
-  color: var(--cor-texto);
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px rgba(0,255,255,0.2);
-}
-
-.social-links li a:hover {
-  background-color: var(--cor-destaque);
-  color: #000;
-}
-
-/* ---------- Responsivo ---------- */
-@media screen and (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .discografia-table thead {
-    display: none;
-  }
-
-  .discografia-table, .discografia-table tbody,
-  .discografia-table tr, .discografia-table td {
-    display: block;
-    width: 100%;
-  }
-
-  .discografia-table tr {
-    margin-bottom: 20px;
-    background-color: #1c1c1c;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  .discografia-table td {
-    text-align: center;
-    border: none;
-    padding: 8px;
-    position: relative;
-  }
-
-  .discografia-table td::before {
-    content: attr(data-label);
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: var(--cor-destaque);
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  #contact-info {
-    font-size: 0.95rem;
-  }
-
-  .social-links li a {
-    font-size: 0.9rem;
-    padding: 8px 14px;
-  }
-}
-
-/* ---------- Navegação vertical ---------- */
+/* 🌟 Navegação sempre visível */
 .vertical-nav {
   position: fixed;
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 999;
 }
 
 .vertical-nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
 .vertical-nav li {
-  margin-bottom: 20px;
+  margin: 15px 0;
 }
 
 .vertical-nav a {
-  display: block;
-  padding: 10px 14px;
-  background-color: #222;
-  color: #00ffe1;
+  color: #fff;
   text-decoration: none;
-  border-radius: 8px;
   font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px rgba(0,255,255,0.2);
+  transition: color 0.3s ease;
 }
 
 .vertical-nav a:hover {
-  background-color: #00ffe1;
-  color: #000;
-  box-shadow: 0 0 12px rgba(0,255,255,0.5);
+  color: #e91e63;
 }
 
-/* ---------- Hero tagline & imagem ---------- */
-.hero-tagline {
-  text-align: center;
-  font-size: 1.4rem;
+/* 🖼️ Seção Galeria topzera */
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  width: 100%;
+  background: linear-gradient(to bottom, #111, #222);
+}
+
+.gallery-item {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* 🧼 Quebra de linha suave em textos */
+p,
+h1,
+h2,
+h3 {
+  word-break: break-word;
+  white-space: normal;
+  line-height: 1.4em;
+}
+
+/* 💣 Botões ou elementos fixos de ação */
+.fixed-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  padding: 12px 20px;
+  background: #e91e63;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
   font-weight: bold;
-  color: #eee;
-  margin-top: 30px;
-  font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 6px #00ffe1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.4);
 }
 
-.hero-image {
-  display: block;
-  max-width: 300px;
-  margin: 30px auto;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,255,255,0.2);
-  transition: transform 0.3s ease;
-}
-
-.hero-image:hover {
-  transform: scale(1.05);
-}
-
-/* ---------- Responsivo mobile ---------- */
-@media screen and (max-width: 768px) {
-  .vertical-nav {
-    position: static;
-    transform: none;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .vertical-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .vertical-nav li {
-    margin: 0;
-  }
-
-  .vertical-nav a {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
-
-  .hero-tagline {
-    font-size: 1.2rem;
-    padding: 0 10px;
-  }
-
-  .hero-image {
-    max-width: 90%;
-  }
+/* 🤟 No limits: remover containers limitantes */
+.hero-container,
+.content {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
 }
 
 
