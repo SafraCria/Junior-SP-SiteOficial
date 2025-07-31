@@ -23,6 +23,33 @@ emailLink?.addEventListener('click', (e) => {
   alert("📋 E-mail copiado: " + email);
 });
 
+.discografia-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.album-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.album-card:hover {
+  transform: scale(1.05);
+}
+
+.album-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
 
 
 >>>>>>> 99f16b6cb4a43076710c7198f66c6cd5da9e8507
