@@ -1,315 +1,447 @@
-/* Resetando e ampliando tudo */
+/* ================================== */
+/* Cores e Fontes Globais */
+/* ================================== */
+:root {
+  --cor-fundo: #0c0c0c;
+  --cor-texto: #e0e0e0;
+  --cor-principal: #FF4081; /* Rosa-choque */
+  --cor-secundaria: #03a9f4; /* Azul */
+  --cor-destaque: #00bcd4; /* Ciano para botões */
+
+  --fonte-principal: 'Poppins', sans-serif;
+  --fonte-titulo: 'Bebas Neue', sans-serif;
+}
+
+/* ================================== */
+/* Gerais */
+/* ================================== */
 body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-principal);
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  width: 100vw;
+  padding-top: 5rem;
   overflow-x: hidden;
-  background: #000; /* vibe visual urbana */
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
 }
 
-/* 🌟 Navegação sempre visível */
-.vertical-nav {
-  position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  z-index: 999;
-}
-
-.vertical-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.vertical-nav li {
-  margin: 15px 0;
-}
-
-.vertical-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.vertical-nav a:hover {
-  color: #e91e63;
-}
-
-/* 🖼️ Seção Galeria topzera */
-#gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
-  width: 100%;
-  background: linear-gradient(to bottom, #111, #222);
-}
-
-.gallery-item {
-  width: 300px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
-}
-
-/* 🧼 Quebra de linha suave em textos */
-p,
-h1,
-h2,
-h3 {
-  word-break: break-word;
-  white-space: normal;
-  line-height: 1.4em;
-}
-
-/* 💣 Botões ou elementos fixos de ação */
-.fixed-button {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 1000;
-  padding: 12px 20px;
-  background: #e91e63;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.4);
-}
-
-/* 🤟 No limits: remover containers limitantes */
-.hero-container,
-.content {
-  max-width: none;
-  width: 100%;
-  padding: 0;
-  margin: 0 auto;
-}
-
-.fixed-top-button {
-  position: fixed;
-  top: 20px;
-  right: 40px;
-  z-index: 1001;
-}
-
-.fixed-lateral-button {
-  position: fixed;
-  bottom: 30px;
-  left: 20px;
-  z-index: 1001;
-}
-
-.card {
-  background: #111;
-  color: #fff;
-  border: 2px solid #0ff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px #0ff;
-  transition: all 0.3s ease-in-out;
-  max-width: 300px;
-  margin: 10px auto;
-}
-
-.card:hover {
-  box-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
-  transform: scale(1.05);
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-/* Layout responsivo para seção de cards */
-.discografia {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-@media (max-width: 600px) {
-  .discografia {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    max-width: 90%;
-  }
-}
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: #000;
-  color: #fff;
-  box-shadow: 0 0 10px #0ff;
-}
-
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #0ff;
-}
-
-.menu ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.menu a:hover {
-  color: #0ff;
-}
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  padding: 20px;
-  color: #fff;
-  box-shadow: 0 0 10px #0ff;
-}
-
-.logo {
-  font-size: 2em;
-  color: #0ff;
-  font-weight: bold;
-  text-shadow: 0 0 5px #0ff;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #0ff;
-}
-
-/* Reset básico para garantir consistência entre navegadores */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Urbanist', sans-serif;
-  background-color: #121212; /* Fundo escuro para destacar o conteúdo */
-  color: #f5f5f5;
-  line-height: 1.6;
-}
-
-header {
-  background: linear-gradient(90deg, #ff8c00, #ff0080); /* Gradiente vibrante */
-  padding: 20px;
-}
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ff8c00;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-principal);
 }
 
 .section-padding {
-  padding: 60px 20px;
+    padding: 4rem 2rem;
 }
 
-.about-content {
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--cor-principal);
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--cor-secundaria);
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ================================== */
+/* Menu de Navegação */
+/* ================================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: var(--cor-texto);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+  background-color: var(--cor-fundo);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--cor-secundaria);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--cor-principal);
+}
+
+/* ... código anterior ... */
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  header {
+    padding: 1rem;
+  }
+  .nav-links li a {
+    font-size: 0.9rem; /* O ajuste mágico para o texto caber */
+  }
+}
+
+/* ================================== */
+/* Seção Banner */
+/* ================================== */
+#hero {
+  background-image: url('img/fallback2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--cor-texto);
+  position: relative;
+  background-attachment: fixed; /* Efeito Parallax */
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.hero-title {
+  font-family: var(--fonte-titulo);
+  font-size: 5rem;
+  color: var(--cor-principal);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.hero-slogan {
+  font-family: var(--fonte-principal);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--cor-texto);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* ================================== */
+/* Seção Biografia */
+/* ================================== */
+#about .bio-text {
+  flex-grow: 1;
+  max-width: 700px;
+  text-align: justify;
+}
+
+.bio-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.bio-subtitle {
+  font-size: 1.8rem;
+  color: var(--cor-secundaria);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.bio-destaque {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .profile-img {
   max-width: 320px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.bio-text {
-  max-width: 500px;
-  text-align: justify;
+/* ================================== */
+/* Seção Discografia */
+/* ================================== */
+.discografia-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
 }
 
-button {
-  background: #ff0080;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
+.discografia-table thead th {
+  font-family: var(--fonte-titulo);
+  background-color: #1e1e1e;
+  color: var(--cor-secundaria);
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--cor-principal);
 }
 
-button:hover {
-  background: #ff8c00;
+.discografia-table tbody tr {
+  background-color: #1a1a1a;
+  transition: background-color 0.3s ease;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .about-content {
-    flex-direction: column;
-  }
+.discografia-table tbody tr:hover {
+  background-color: #2a2a2a;
 }
-```
+
+.discografia-table tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  color: var(--cor-texto);
+}
+
+.discografia-table tbody td a {
+  color: var(--cor-principal);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.discografia-table tbody td a:hover {
+  text-decoration: underline;
+}
+
+.video-destaque {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================== */
+/* Seção Música */
+/* ================================== */
+#music {
+  padding: 4rem 2rem;
+}
+
+.music-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.music-item {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  flex-basis: 300px;
+  flex-grow: 1;
+  max-width: 400px;
+}
+
+.track-title {
+  color: var(--cor-principal);
+  font-family: var(--fonte-titulo);
+  margin-bottom: 0.5rem;
+}
+
+.track-info {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+audio {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.platform-links a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.platform-links a:hover {
+  color: var(--cor-principal);
+}
+
+/* ================================== */
+/* Seção Contato */
+/* ================================== */
+#contact .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-item {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  flex-basis: 300px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.contact-item h3 {
+  color: var(--cor-principal);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.link-contato, .link-social {
+  color: var(--cor-secundaria);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.link-contato:hover, .link-social:hover {
+  color: var(--cor-principal);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.social-links li a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+  color: var(--cor-principal);
+}
+
+.social-links li a .fab {
+  margin-right: 8px;
+}
+
+
+/* ================================== */
+/* Galeria de Fotos */
+/* ================================== */
+#gallery {
+  padding: 4rem 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+figure {
+  text-align: center;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ================================== */
+/* Rodapé */
+/* ================================== */
+footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.parceria-logos img {
+  height: 30px;
+  margin: 0 5px;
+}
 
 >>>>>>> 99f16b6cb4a43076710c7198f66c6cd5da9e8507
