@@ -442,3 +442,11 @@ footer {
   height: 30px;
   margin: 0 5px;
 }
+
+/* ================================== */
+/* Cores e Fontes Globais */
+/* ================================== */
+/* TESTE DE ATUALIZAÇÃO */
+:root {
+  --cor-fundo: #0c0c0c;
+/* ... o restante do código ... */
