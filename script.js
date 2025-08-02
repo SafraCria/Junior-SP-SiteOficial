@@ -1,3 +1,5 @@
+// Código final com a correção do menu
+
 // script.js
 
 // Adiciona um listener para a rolagem da janela
